@@ -1,3 +1,4 @@
+import Cats from "./_components/Cats";
 import Hero from "./_components/Hero";
 import Journey from "./_components/Journey";
 import Projects from "./_components/Projects";
@@ -11,6 +12,7 @@ export default function Page() {
       <main className="flex w-full flex-col">
         <Hero />
         <Journey />
+        <Cats />
         <Projects />
         <Resume />
         <footer className="mx-auto w-full max-w-3xl px-6 py-16 text-center font-mono text-[11px] uppercase tracking-widest text-neutral-500">
