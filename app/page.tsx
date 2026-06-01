@@ -1,4 +1,5 @@
 import Cats from "./_components/Cats";
+import CursorGlow from "./_components/CursorGlow";
 import Hero from "./_components/Hero";
 import Journey from "./_components/Journey";
 import Projects from "./_components/Projects";
@@ -9,6 +10,7 @@ export default function Page() {
   return (
     <>
       <ScrollProgress />
+      <CursorGlow />
       <main className="flex w-full flex-col">
         <Hero />
         <Journey />
