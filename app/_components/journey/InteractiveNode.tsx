@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import type { JourneyNode, NodeKind } from "../constants/journey-data";
+import type { JourneyNode, NodeKind } from "../../constants/journey-data";
 
 const kindGlyph: Record<NodeKind, string> = {
   quest: "◇",

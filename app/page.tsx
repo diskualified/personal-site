@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useSyncExternalStore } from "react";
 import { AnimatePresence, motion, useAnimate } from "motion/react";
 import CursorGlow from "./_components/effects/CursorGlow";
 import Hero from "./_components/Hero";
@@ -11,53 +11,50 @@ import type { ZoneId } from "./_components/map/WorldMap";
 const VALID_ZONES: ZoneId[] = ["journey", "projects", "resume", "contact"];
 
 function readZoneFromUrl(): ZoneId | null {
-  if (typeof window === "undefined") return null;
-  const z = new URLSearchParams(window.location.search).get(
-    "zone",
-  ) as ZoneId | null;
+  const z = new URLSearchParams(window.location.search).get("zone") as ZoneId | null;
   return z && VALID_ZONES.includes(z) ? z : null;
 }
 
+// useSyncExternalStore is the React-idiomatic way to handle server/client
+// divergence without calling setState inside an effect.
+const noop = () => () => {};
+function useIsMounted() {
+  return useSyncExternalStore(noop, () => true, () => false);
+}
+
 export default function Page() {
-  // Lazy-initialize from URL so there's no setState-in-effect warning
-  const [selectedZone, setSelectedZone] = useState<ZoneId | null>(
-    readZoneFromUrl,
-  );
-  const [origin, setOrigin] = useState<{ x: number; y: number }>(() => ({
-    x: typeof window !== "undefined" ? window.innerWidth / 2 : 0,
-    y: typeof window !== "undefined" ? window.innerHeight / 2 : 0,
-  }));
+  const mounted = useIsMounted(); // false on server, true after hydration
+  const [selectedZone, setSelectedZone] = useState<ZoneId | null>(null);
+  const [origin, setOrigin] = useState({ x: 0, y: 0 });
   const [transitioning, setTransitioning] = useState(false);
 
   const mapSectionRef = useRef<HTMLElement>(null);
   const [mapScope, animateMap] = useAnimate();
 
-  // If we landed with a zone in the URL, scroll past the hero to the map
+  // Read URL zone after hydration and scroll past the hero if needed
   useEffect(() => {
-    if (readZoneFromUrl()) {
-      const el = mapSectionRef.current;
-      if (el)
-        window.scrollTo({
-          top: el.getBoundingClientRect().top + window.scrollY,
-        });
-    }
-  }, []); // intentionally empty — runs once on mount
+    const zone = readZoneFromUrl();
+    if (!zone) return;
+    const el = mapSectionRef.current;
+    if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY });
+    setOrigin({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
+    setSelectedZone(zone);
+  }, []);
 
-  // Keep URL in sync as zones open / close
+  // Keep URL in sync as zones open / close (skip on server)
   useEffect(() => {
+    if (!mounted) return;
     if (selectedZone) {
       history.replaceState(null, "", `?zone=${selectedZone}`);
     } else {
       history.replaceState(null, "", location.pathname);
     }
-  }, [selectedZone]);
+  }, [selectedZone, mounted]);
 
   // Lock outer scroll while a zone is open
   useEffect(() => {
     document.body.style.overflow = selectedZone ? "hidden" : "";
-    return () => {
-      document.body.style.overflow = "";
-    };
+    return () => { document.body.style.overflow = ""; };
   }, [selectedZone]);
 
   const handleStart = () => {
@@ -67,19 +64,11 @@ export default function Page() {
         window.scrollTo({ top: mapSectionRef.current.offsetTop });
       }
       if (mapScope.current) {
-        animateMap(
-          mapScope.current,
-          { scale: 1.35, y: 60, opacity: 0.4 },
-          { duration: 0 },
-        );
-        animateMap(
-          mapScope.current,
-          { scale: 1, y: 0, opacity: 1 },
-          {
-            duration: 0.85,
-            ease: [0.22, 1, 0.36, 1],
-          },
-        );
+        animateMap(mapScope.current, { scale: 1.35, y: 60, opacity: 0.4 }, { duration: 0 });
+        animateMap(mapScope.current, { scale: 1, y: 0, opacity: 1 }, {
+          duration: 0.85,
+          ease: [0.22, 1, 0.36, 1],
+        });
       }
       setTransitioning(false);
     }, 900);
@@ -108,10 +97,7 @@ export default function Page() {
           <motion.div
             initial={{ opacity: 0 }}
             animate={{ opacity: 1 }}
-            exit={{
-              opacity: 0,
-              transition: { duration: 0.6, ease: "easeInOut" },
-            }}
+            exit={{ opacity: 0, transition: { duration: 0.6, ease: "easeInOut" } }}
             transition={{ duration: 0.28 }}
             className="fixed inset-0 z-40 flex items-center justify-center bg-[#0a0a0a]"
           >
@@ -127,9 +113,9 @@ export default function Page() {
         )}
       </AnimatePresence>
 
-      {/* Zone overlay — circle-reveals over the map */}
+      {/* Zone overlay — gated by mounted so first client render matches server */}
       <AnimatePresence>
-        {selectedZone && (
+        {mounted && selectedZone && (
           <ZoneOverlay
             key={selectedZone}
             zone={selectedZone}
