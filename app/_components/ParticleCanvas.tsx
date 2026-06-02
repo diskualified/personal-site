@@ -19,7 +19,8 @@ export default function ParticleCanvas() {
   useEffect(() => {
     const canvas = ref.current;
     if (!canvas) return;
-    const ctx = canvas.getContext("2d")!;
+    const el = canvas;
+    const ctx = el.getContext("2d")!;
     let W = 0,
       H = 0,
       raf = 0,
@@ -28,8 +29,8 @@ export default function ParticleCanvas() {
     const particles: Particle[] = [];
 
     function resize() {
-      W = canvas.width = canvas.offsetWidth;
-      H = canvas.height = canvas.offsetHeight;
+      W = el.width = el.offsetWidth;
+      H = el.height = el.offsetHeight;
     }
 
     function spawn(): Particle {
