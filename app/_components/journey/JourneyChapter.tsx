@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import type { Chapter } from "./journey-data";
+import type { Chapter } from "../constants/journey-data";
 import InteractiveNode from "./InteractiveNode";
 
 export default function JourneyChapter({
