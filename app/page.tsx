@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect, useSyncExternalStore } from "react";
+import { useState, useRef, useEffect, useSyncExternalStore, startTransition } from "react";
 import { AnimatePresence, motion, useAnimate } from "motion/react";
 import CursorGlow from "./_components/effects/CursorGlow";
 import Hero from "./_components/Hero";
@@ -37,8 +37,10 @@ export default function Page() {
     if (!zone) return;
     const el = mapSectionRef.current;
     if (el) window.scrollTo({ top: el.getBoundingClientRect().top + window.scrollY });
-    setOrigin({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
-    setSelectedZone(zone);
+    startTransition(() => {
+      setOrigin({ x: window.innerWidth / 2, y: window.innerHeight / 2 });
+      setSelectedZone(zone);
+    });
   }, []);
 
   // Keep URL in sync as zones open / close (skip on server)
