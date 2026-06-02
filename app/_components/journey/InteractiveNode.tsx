@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import type { JourneyNode, NodeKind } from "./journey-data";
+import type { JourneyNode, NodeKind } from "../constants/journey-data";
 
 const kindGlyph: Record<NodeKind, string> = {
   quest: "◇",
@@ -45,10 +45,14 @@ export default function InteractiveNode({ node }: { node: JourneyNode }) {
             onClick={(e) => e.stopPropagation()}
           >
             <p className="font-mono text-[11px] uppercase tracking-widest text-neutral-500">
-              <span className="mr-2 text-base leading-none">{kindGlyph[node.kind]}</span>
+              <span className="mr-2 text-base leading-none">
+                {kindGlyph[node.kind]}
+              </span>
               {node.label}
             </p>
-            <h4 className="mt-4 text-2xl font-light tracking-tight">{node.title}</h4>
+            <h4 className="mt-4 text-2xl font-light tracking-tight">
+              {node.title}
+            </h4>
             <p className="mt-4 leading-relaxed text-neutral-600 dark:text-neutral-400">
               {node.body}
             </p>

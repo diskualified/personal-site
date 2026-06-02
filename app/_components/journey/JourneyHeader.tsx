@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "motion/react";
-import AnimatedChars from "./AnimatedChars";
+import AnimatedChars from "../effects/AnimatedChars";
 
 export default function JourneyHeader() {
   const ref = useRef<HTMLElement>(null);

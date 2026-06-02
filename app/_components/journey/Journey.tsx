@@ -1,4 +1,4 @@
-import { chapters } from "../constants/journey-data";
+import { chapters } from "@/app/constants/journey-data";
 import JourneyChapter from "./JourneyChapter";
 import JourneyHeader from "./JourneyHeader";
 
