@@ -1,62 +1,79 @@
 export const profile = {
   name: "david qian",
-  tagline: "a small portfolio shaped like a journey. scroll to play through.",
-  email: "hello@example.com",
+  tagline:
+    "full-stack engineer building scalable systems for data\u2011driven\u00A0storytelling.",
+  email: "david.qian02@gmail.com",
 };
 
 export const resume = {
   experience: [
     {
-      role: "Role title",
-      company: "Company",
-      period: "2023 — present",
-      summary: "Short description of what you do here and the kind of problems you tackle.",
+      role: "Full-stack engineer",
+      company: "ShareWell",
+      period: "Aug 2024 — present",
+      summary:
+        "Short description of what you do here and the kind of problems you tackle.",
     },
     {
-      role: "Previous role",
-      company: "Previous company",
-      period: "2020 — 2023",
+      role: "Data Strategy Intern",
+      company: "Nickelodeon Animation Studio",
+      period: "June — Aug 2023",
       summary: "Short description of what you shipped and what you learned.",
     },
   ],
   education: [
     {
-      school: "University name",
-      degree: "Degree, Major",
-      period: "2016 — 2020",
+      school: "Harvard",
+      degree: "B.A. Computer Science",
+      period: "2020 — 2024",
     },
   ],
   skills: [
-    "typescript",
     "react",
+    "typescript",
     "next.js",
-    "node",
     "python",
+    "sql",
+    "java",
+    "c++",
+    "rag",
+    "agentic workflows",
     "design systems",
     "product",
+    "tableau",
   ],
 };
 
 export const projects = [
   {
-    name: "project alpha",
-    year: "2025",
-    tag: "web",
-    summary: "a tool that does the thing you wish existed",
-    href: "#",
+    name: "rag pipeline project",
+    year: "2026",
+    tag: "learning",
+    summary:
+      "implementing a retrieval-augmented generation pipeline with vector database embeddings and optimizations",
+    href: "https://github.com/diskualified/rag-practice",
   },
   {
-    name: "project beta",
-    year: "2024",
-    tag: "experiment",
-    summary: "a weekend hack that grew into something",
-    href: "#",
-  },
-  {
-    name: "project gamma",
+    name: "database project",
     year: "2023",
-    tag: "open source",
-    summary: "a library used by a small but mighty crew",
+    tag: "data systems",
+    summary:
+      "implemented a column-store database from scratch featuring persistent storage, optimized query batching, and B-tree indexing",
     href: "#",
+  },
+  {
+    name: "census research project",
+    year: "2022",
+    tag: "data visualization",
+    summary:
+      "racial dot map visualization of 2020 census data using d3, canvas, and kepler.gl",
+    href: "https://github.com/diskualified/2020-us-census-visualization-prj",
+  },
+  {
+    name: "harvard radcliffe chinese students association (csa) website",
+    year: "2021",
+    tag: "web development",
+    summary: "built and maintained organization's website",
+    href: "https://harvardradcliffecsa.org/",
   },
 ];
