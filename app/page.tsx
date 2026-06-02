@@ -2,11 +2,11 @@
 
 import { useState, useRef, useEffect, useSyncExternalStore, startTransition } from "react";
 import { AnimatePresence, motion, useAnimate } from "motion/react";
-import CursorGlow from "./_components/effects/CursorGlow";
-import Hero from "./_components/Hero";
-import WorldMap from "./_components/map/WorldMap";
-import ZoneOverlay from "./_components/map/ZoneOverlay";
-import type { ZoneId } from "./_components/map/WorldMap";
+import CursorGlow from "./components/effects/CursorGlow";
+import Hero from "./components/Hero";
+import WorldMap from "./components/map/WorldMap";
+import ZoneOverlay from "./components/map/ZoneOverlay";
+import type { ZoneId } from "./components/map/WorldMap";
 
 const VALID_ZONES: ZoneId[] = ["journey", "projects", "resume", "contact"];
 
