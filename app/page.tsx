@@ -62,6 +62,7 @@ export default function Page() {
 
   const handleStart = () => {
     setTransitioning(true);
+    // Scroll after overlay is fully opaque (0.6s fade-in), so the jump is hidden
     setTimeout(() => {
       if (mapSectionRef.current) {
         window.scrollTo({ top: mapSectionRef.current.offsetTop });
@@ -73,8 +74,9 @@ export default function Page() {
           ease: [0.22, 1, 0.36, 1],
         });
       }
-      setTransitioning(false);
-    }, 900);
+    }, 650);
+    // Fade out overlay separately, after scroll is already done
+    setTimeout(() => setTransitioning(false), 900);
   };
 
   const handleSelectZone = (id: ZoneId, coords: { x: number; y: number }) => {
