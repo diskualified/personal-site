@@ -8,7 +8,7 @@ const CATS = [
   {
     src: "/images/Moon.png",
     name: "Moon",
-    caption: "perpetually judging",
+    caption: "easter fit",
     width: 300,
     height: 240,
     rotate: -8,
@@ -17,7 +17,7 @@ const CATS = [
   },
   {
     src: "/images/MoonAndBash.png",
-    name: "Moon & Bash",
+    name: "The Boys",
     caption: "the dynamic duo",
     width: 370,
     height: 296,
