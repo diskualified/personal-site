@@ -42,16 +42,16 @@ export function ContactContent() {
             <span className="ml-auto font-mono text-[9px] uppercase tracking-widest text-neutral-700 transition-colors group-hover:text-emerald-600">
               open ↗
             </span>
-            <a
-              href={`https://github.com/diskualified`}
-              className="group flex items-center gap-3 rounded-xl border border-neutral-800 bg-neutral-900/40 px-6 py-4 text-sm text-neutral-400 transition-colors hover:border-emerald-900 hover:text-neutral-200"
-            >
-              <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
-              github
-              <span className="ml-auto font-mono text-[9px] uppercase tracking-widest text-neutral-700 transition-colors group-hover:text-emerald-600">
-                open ↗
-              </span>
-            </a>
+          </a>
+          <a
+            href={`https://github.com/diskualified`}
+            className="group flex items-center gap-3 rounded-xl border border-neutral-800 bg-neutral-900/40 px-6 py-4 text-sm text-neutral-400 transition-colors hover:border-emerald-900 hover:text-neutral-200"
+          >
+            <span className="h-1.5 w-1.5 rounded-full bg-emerald-500" />
+            github
+            <span className="ml-auto font-mono text-[9px] uppercase tracking-widest text-neutral-700 transition-colors group-hover:text-emerald-600">
+              open ↗
+            </span>
           </a>
         </div>
       </motion.div>
