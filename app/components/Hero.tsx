@@ -70,7 +70,7 @@ export default function Hero({ onStart }: { onStart: () => void }) {
         >
           <button
             onClick={onStart}
-            className="group flex items-center gap-3 rounded-full border border-neutral-700 px-8 py-3 font-mono text-xs uppercase tracking-[0.3em] text-neutral-400 transition-all hover:border-neutral-400 hover:text-neutral-100"
+            className="group flex cursor-pointer items-center gap-3 rounded-full border border-neutral-700 px-8 py-3 font-mono text-xs uppercase tracking-[0.3em] text-neutral-400 transition-all hover:border-neutral-400 hover:text-neutral-100"
           >
             <motion.span
               animate={{ opacity: [1, 0.3, 1] }}

@@ -23,7 +23,7 @@ export const chapters: Chapter[] = [
     number: "01",
     title: "origin",
     subtitle: "before the journey began",
-    body: "Every protagonist starts somewhere quiet. A small town, a curiosity, a first computer humming late at night. The save file was created here.",
+    body: "Everyone starts somewhere. I'm an Asian-American kid from Boston, MA.",
     nodes: [
       {
         id: "first-keyboard",
@@ -35,11 +35,11 @@ export const chapters: Chapter[] = [
     ],
   },
   {
-    id: "awakening",
+    id: "the call",
     number: "02",
-    title: "the awakening",
+    title: "the call",
     subtitle: "discovering the craft",
-    body: "A line of code returns hello, world. Something clicks. The map opens up and the first real quest begins.",
+    body: "The first hello world in 2019. At the same time, Asian-American representation in media is a big inspiration. I'm determined to find an intersection between technology and entertainment.",
     nodes: [
       {
         id: "first-site",
@@ -54,8 +54,8 @@ export const chapters: Chapter[] = [
     id: "gauntlet",
     number: "03",
     title: "the gauntlet",
-    subtitle: "first real challenges",
-    body: "Bugs, deadlines, late nights. Each defeat earns experience; each shipped feature unlocks a new perk in the tree.",
+    subtitle: "making things people use",
+    body: "After Nickelodeon, I realize I want to continue to create real impact for communities in need. By squashing bugs, late nights, and some luck, I join ShareWell, focused on reshaping mental health beyond traditional therapy and growing accessibility to peer support group communities.",
     nodes: [
       {
         id: "first-job",
@@ -76,22 +76,22 @@ export const chapters: Chapter[] = [
   {
     id: "build",
     number: "04",
-    title: "building worlds",
-    subtitle: "making things people use",
-    body: "Side projects became side businesses. Tools became products. The map widened and the inventory filled up.",
+    title: "new worlds",
+    subtitle: "first real challenges",
+    body: "From frontend to fullstack, each shipped feature unlocks a new skill in the tree. Now in the world of AI, I am navigating the unknowns and evolving my skills with the new technologies.",
     nodes: [
       {
         id: "project-alpha",
         kind: "loot",
         label: "artifact crafted",
-        title: "project alpha",
+        title: "rag project",
         body: "A little tool that helped a lot of people.",
       },
       {
         id: "project-beta",
         kind: "loot",
         label: "artifact crafted",
-        title: "project beta",
+        title: "agentic workflows",
         body: "An experiment that turned into a community.",
       },
     ],
@@ -99,9 +99,9 @@ export const chapters: Chapter[] = [
   {
     id: "now",
     number: "05",
-    title: "current quest",
+    title: "the present",
     subtitle: "where i am today",
-    body: "Still leveling up. Currently exploring (your current focus here). Always looking for the next interesting problem to side-quest into.",
+    body: "Still leveling up, as fast as ever. Currently exploring how AI can build a better world.",
     nodes: [
       {
         id: "collab",

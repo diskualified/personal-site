@@ -67,7 +67,7 @@ export default function ZoneOverlay({
         exit={{ opacity: 0, x: -10 }}
         transition={{ delay: 0.38, duration: 0.22 }}
         onClick={onClose}
-        className="absolute left-6 top-5 z-20 flex items-center gap-2 rounded-full border border-neutral-800 bg-[#0a0a0a]/80 px-4 py-2 font-mono text-[9px] uppercase tracking-widest text-neutral-500 backdrop-blur-sm transition-colors hover:border-neutral-600 hover:text-neutral-200"
+        className="absolute left-6 top-5 z-20 flex cursor-pointer items-center gap-2 rounded-full border border-neutral-800 bg-[#0a0a0a]/80 px-4 py-2 font-mono text-[9px] uppercase tracking-widest text-neutral-500 backdrop-blur-sm transition-colors hover:border-neutral-600 hover:text-neutral-200"
       >
         ← map
       </motion.button>

@@ -148,7 +148,7 @@ function MapNodeEl({
       initial={{ opacity: 0, scale: 0 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ delay: 0.35 + index * 0.12, type: "spring", stiffness: 280, damping: 20 }}
-      className="absolute -translate-x-1/2 -translate-y-1/2"
+      className="absolute -translate-x-1/2 -translate-y-1/2 cursor-pointer"
       style={{ left: cx, top: cy }}
       onMouseEnter={() => onHover(node.id)}
       onMouseLeave={() => onHover(null)}

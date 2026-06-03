@@ -27,7 +27,7 @@ export default function InteractiveNode({ node }: { node: JourneyNode }) {
       <button
         type="button"
         onClick={() => setOpen(true)}
-        className="group inline-flex items-center gap-2 rounded-full border border-neutral-300 px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-neutral-600 transition hover:-translate-y-px hover:border-neutral-900 hover:text-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:hover:border-neutral-100 dark:hover:text-neutral-100"
+        className="group inline-flex cursor-pointer items-center gap-2 rounded-full border border-neutral-300 px-3 py-1.5 font-mono text-[11px] uppercase tracking-wider text-neutral-600 transition hover:-translate-y-px hover:border-neutral-900 hover:text-neutral-900 dark:border-neutral-700 dark:text-neutral-400 dark:hover:border-neutral-100 dark:hover:text-neutral-100"
       >
         <span className="text-base leading-none">{kindGlyph[node.kind]}</span>
         <span>{node.label}</span>
@@ -59,7 +59,7 @@ export default function InteractiveNode({ node }: { node: JourneyNode }) {
             <button
               type="button"
               onClick={() => setOpen(false)}
-              className="mt-8 font-mono text-[11px] uppercase tracking-widest text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100"
+              className="mt-8 cursor-pointer font-mono text-[11px] uppercase tracking-widest text-neutral-500 hover:text-neutral-900 dark:hover:text-neutral-100"
             >
               close ✕
             </button>

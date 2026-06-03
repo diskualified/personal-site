@@ -7,6 +7,7 @@ import Hero from "./components/Hero";
 import WorldMap from "./components/map/WorldMap";
 import ZoneOverlay from "./components/map/ZoneOverlay";
 import type { ZoneId } from "./components/map/WorldMap";
+import Cats from "./components/Cats";
 
 const VALID_ZONES: ZoneId[] = ["journey", "projects", "resume", "contact"];
 
@@ -92,6 +93,8 @@ export default function Page() {
           <WorldMap onSelectZone={handleSelectZone} />
         </div>
       </section>
+      
+      <Cats />
 
       {/* Cinematic flash overlay for start transition */}
       <AnimatePresence>
