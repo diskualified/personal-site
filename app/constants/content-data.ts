@@ -12,7 +12,7 @@ export const resume = {
       company: "ShareWell",
       period: "Aug 2024 — present",
       summary:
-        "Drove growth efforts and rapid iteration on end-to-end features for 10k monthly active users",
+        "Drove growth efforts and rapid iteration on end-to-end features for 10k monthly active users.",
     },
     {
       role: "Data Strategy Intern",

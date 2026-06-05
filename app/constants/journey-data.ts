@@ -78,7 +78,7 @@ export const chapters: Chapter[] = [
     number: "04",
     title: "new worlds",
     subtitle: "first real challenges",
-    body: "From frontend to fullstack, each shipped feature unlocks a new skill in the tree. Now in the world of AI, I am navigating the unknowns and evolving my skills with the new technologies.",
+    body: "I collaborated directly with the CPO and Head of Engineering daily to drive the development of new features on ShareWell. My biggest impacts include reworking the landing page flows, redesigning online group call UI/UX, data analytics for business model optimization, and end-to-end registration waitlist flows. From frontend to fullstack, shipped features led to +50% reduced user acquisition costs, increased user conversion rates, and led to live positive feedback from our users.",
     nodes: [
       {
         id: "project-alpha",
@@ -101,7 +101,7 @@ export const chapters: Chapter[] = [
     number: "05",
     title: "the present",
     subtitle: "where i am today",
-    body: "Still leveling up, as fast as ever. Currently exploring how AI can build a better world.",
+    body: "Now in the world of AI, I am navigating the unknowns and evolving my skills with the new technologies. Currently experimenting with how AI can build a better world.",
     nodes: [
       {
         id: "collab",

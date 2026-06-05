@@ -53,11 +53,10 @@ export default function ZoneOverlay({
           className="sticky top-0 z-10 h-0.5 w-full"
           style={{ background: meta.color }}
         />
-
-        {zone === "journey" && <JourneyContent />}
+        {zone === "resume" && <ResumeContent />}
         {zone === "projects" && <ProjectsContent />}
         {zone === "contact" && <ContactContent />}
-        {zone === "resume" && <ResumeContent />}
+        {zone === "journey" && <JourneyContent />}
       </motion.div>
 
       {/* Back button — stays fixed while content scrolls */}

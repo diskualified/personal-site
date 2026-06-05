@@ -7,7 +7,7 @@ export function ResumeContent() {
   return (
     <div className="mx-auto max-w-2xl px-8 pb-32 pt-28">
       <p className="font-mono text-[10px] uppercase tracking-[0.45em] text-violet-600">
-        chapter 04
+        chapter 01
       </p>
       <h2 className="mt-3 text-4xl font-light tracking-tight text-neutral-100">
         work experience
