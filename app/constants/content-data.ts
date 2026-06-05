@@ -12,13 +12,14 @@ export const resume = {
       company: "ShareWell",
       period: "Aug 2024 — present",
       summary:
-        "Short description of what you do here and the kind of problems you tackle.",
+        "Drove growth efforts and rapid iteration on end-to-end features for 10k monthly active users",
     },
     {
       role: "Data Strategy Intern",
       company: "Nickelodeon Animation Studio",
       period: "June — Aug 2023",
-      summary: "Short description of what you shipped and what you learned.",
+      summary:
+        "Optimized production reporting pipelines to improve decision-making for studio executives.",
     },
   ],
   education: [

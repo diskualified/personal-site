@@ -23,13 +23,13 @@ export const chapters: Chapter[] = [
     number: "01",
     title: "origin",
     subtitle: "before the journey began",
-    body: "Everyone starts somewhere. I'm an Asian-American kid from Boston, MA.",
+    body: "From Boston, MA, my first hello world happens in 2019. At the time, Asian-American representation in media is a big inspiration. I'm determined to find an intersection between technology and entertainment",
     nodes: [
       {
-        id: "first-keyboard",
+        id: "first-website",
         kind: "loot",
         label: "item acquired",
-        title: "first keyboard",
+        title: "shipped my first website",
         body: "Sticky keys, glowing letters, infinite possibility. The original tool.",
       },
     ],
@@ -39,13 +39,13 @@ export const chapters: Chapter[] = [
     number: "02",
     title: "the call",
     subtitle: "discovering the craft",
-    body: "The first hello world in 2019. At the same time, Asian-American representation in media is a big inspiration. I'm determined to find an intersection between technology and entertainment.",
+    body: "I get a taste at Nickelodeon. I realize I want to continue to create real impact for communities in need through software engineering.",
     nodes: [
       {
-        id: "first-site",
+        id: "college",
         kind: "quest",
         label: "side quest complete",
-        title: "shipped my first website",
+        title: "college years",
         body: "It was ugly. It was online. It was mine. +10 XP.",
       },
     ],
@@ -55,7 +55,7 @@ export const chapters: Chapter[] = [
     number: "03",
     title: "the gauntlet",
     subtitle: "making things people use",
-    body: "After Nickelodeon, I realize I want to continue to create real impact for communities in need. By squashing bugs, late nights, and some luck, I join ShareWell, focused on reshaping mental health beyond traditional therapy and growing accessibility to peer support group communities.",
+    body: "After squashing bugs, late nights, and some luck, I join ShareWell, focused on reshaping mental health beyond traditional therapy and growing accessibility to peer support group communities.",
     nodes: [
       {
         id: "first-job",
